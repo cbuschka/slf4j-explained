@@ -18,10 +18,10 @@ This is the api you use for log statements within your app.
 * [jcl-over-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:jcl-over-slf4j) - redirect java commons logging calls to slf4j
 * [log4j-over-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:log4j-over-slf4j) - redirect log4j calls to slf4j
 
-### DONT Circular logging setup
-* NEVER [slf4j-log4j12](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-log4j12) -> slf4j-api -> log4j-over-slf4j
-* NEVER [jcl-over-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:jcl-over-slf4j) -> slf4j-api -> slf4j-jcl
-* NEVER [jul-to-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:jul-to-slf4j) -> slf4j-api -> slf4j-jdk14
+### DONTS: Circular logging setup
+* NEVER [log4j-over-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:log4j-over-slf4j) -> [slf4j-api](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-api) -> [slf4j-log4j12](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-log4j12)
+* NEVER [jcl-over-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:jcl-over-slf4j) -> [slf4j-api](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-api) -> [slf4j-jcl](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-jcl) 
+* NEVER [jul-to-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:jul-to-slf4j) -> [slf4j-api](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-api) -> [slf4j-jdk14](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-jdk14)
 
 ## References
 * [slf4j bridge doc](https://www.slf4j.org/legacy.html)
