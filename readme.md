@@ -12,11 +12,13 @@ This is the api you use for log statements within your app.
 * [slf4j-nop](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-nop) - makes slf4j to suppress all log messages
 * [slf4j-jcl](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-jcl) - let slf4j log to java commons logging
 * [slf4j-jdk14](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-jdk14) - let slf4j log over java.util.logging
+* [log4j-slf4j-impl](https://search.maven.org/search?q=g:org.apache.logging.log4j%20a:log4j-slf4j-impl) - make slf4j log over log4j 2.x
 
 ### OPTIONAL: Bridges - adapt old code
 * [jul-to-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:jul-to-slf4j) - redirect java.util.logging calls to slf4j
 * [jcl-over-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:jcl-over-slf4j) - redirect java commons logging calls to slf4j
 * [log4j-over-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:log4j-over-slf4j) - redirect log4j calls to slf4j
+* [log4j-to-slf4j](https://search.maven.org/search?q=g:org.apache.logging.log4j%20a:log4j-to-slf4j) - redirect log4j 2.x calls to slf4j
 
 ### DONTS: Circular logging setup
 * NEVER [log4j-over-slf4j](https://search.maven.org/search?q=g:org.slf4j%20a:log4j-over-slf4j) -> [slf4j-api](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-api) -> [slf4j-log4j12](https://search.maven.org/search?q=g:org.slf4j%20a:slf4j-log4j12)
